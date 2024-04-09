@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" 
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+         <title> MathWave | Break Time</title>
+         <link rel="stylesheet" type="text/css" href="styles/breakStyles.css">
+        <link rel="icon" type="image/jpeg" href="images/favicon.png">
+    </head>
+
+
+    <body>
+        <div class = "bg-img">
+            <div class= "overlay"></div>
+        </div>
+         
+        <div class="main-container">
+            <header>
+                <!-- nav menu -->
+                <nav class="navbar">
+                    <!--logo-->
+                    <button class="logo-button" id="logo-button">
+                        <div class="logo-container"></div>
+                    </button>
+                    <!--nav buttons-->
+                    <div class="nav-buttons">
+                        <button class="button" id="about-button">About</button>
+                         <button class="button" id="login-button">Login</button>
+                        <button class="button" id="signup-button">Signup</button>
+                        <button class="button" id="break-button">Break Time</button>
+                        <button class="button" id ="support-button">Support</button>
+                    </div>
+                </nav>
+            </header>
+            <div class="content-wrapper">
+                <canvas width="800" height="950" id="game"></canvas>
+                
+                <div id="break-container">
+                    <h2 class="catchy-phrase"> <br> 🌟 Break Time Fun! 🌈</h2>
+                    <div class="hr"></div>
+                   
+                    <section class="faq">
+                        <h1>Why a Break?</h1>
+                        <div class="faq-item">
+                            <p><strong>Hey there, Super Learner!</strong></p>
+        <p>Guess what? It's time to take a super cool break! 😎 Breaks are like a magic potion for your brain. They help you rest, make you smarter, and get you ready for more awesome learning!
+             So, let's dive into some super fun activities!</p>
+                        <br>
+                        </div>
+
+                        <h1>🌟 Quick Break Activities 🌈:</h1>
+                        <p>Here are some suggestions to get you started!</p>
+                        <ul>
+                            <li><strong>Dance Party🕺💃:</strong> Shake and move to a fun song!</li>
+                            <li><strong>Coloring Challenge 🎨:</strong> Color a fun picture.</li>
+                            <li><strong>Stretching Time🧘:</strong> Reach high and touch your toes.</li>
+                        </ul>
+                        <p>These fun activities are perfect for a quick 5-10 minute break. Choose one and enjoy your break time!</p>
+
+                        </section>
+
+                </div>
+                    
+                <div>
+            </div>
+        </div>
+
+        <script>
+
+            //page specfic button functionality-----
+            document.addEventListener('DOMContentLoaded', function() {
+                // get started onboarding
+				var getStartedButton = document.getElementById('get-started-btn');
+				if (getStartedButton) {
+					getStartedButton.addEventListener('click', function() {
+						window.location.href = 'get_started/sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                //nav bar buttons
+                var aboutButton = document.getElementById('about-button');
+				if (aboutButton) {
+					aboutButton.addEventListener('click', function() {
+						window.location.href = 'about.html'; // Redirect to about.html
+					});
+                }
+                
+                var loginButton = document.getElementById('login-button');
+				if (loginButton) {
+					loginButton.addEventListener('click', function() {
+						window.location.href = 'login.html'; // Redirect to login.html
+					});
+                }
+                var signupButton = document.getElementById('signup-button');
+				if (signupButton) {
+					signupButton.addEventListener('click', function() {
+						window.location.href = 'get_started/sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                var breakButton = document.getElementById('break-button');
+				if (breakButton) {
+					breakButton.addEventListener('click', function() {
+						window.location.href = 'break_time.html'; // Redirect to break.html
+					});
+                }
+                var supportButton = document.getElementById('support-button');
+				if (supportButton) {
+					supportButton.addEventListener('click', function() {
+						window.location.href = 'support.html'; // Redirect to break.html
+					});
+                }
+
+                var logoButton = document.getElementById('logo-button');
+				if (logoButton) {
+					logoButton.addEventListener('click', function() {
+						window.location.href = 'index.html'; // Redirect to index.html
+					});
+                }
+
+                
+            
+            });
+
+            var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+
+// the canvas width & height, snake x & y, and the apple x & y, all need to be a multiples of the grid size in order for collision detection to work
+// (e.g. 16 * 25 = 400)
+var grid = 16;
+var count = 0;
+
+var snake = {
+  x: 160,
+  y: 160,
+
+  // snake velocity. moves one grid length every frame in either the x or y direction
+  dx: grid,
+  dy: 0,
+
+  // keep track of all grids the snake body occupies
+  cells: [],
+
+  // length of the snake. grows when eating an apple
+  maxCells: 4
+};
+var apple = {
+  x: 320,
+  y: 320
+};
+
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+
+  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  if (++count < 4) {
+    return;
+  }
+
+  count = 0;
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - grid;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - grid;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+
+  // keep track of where snake has been. front of the array is always the head
+  snake.cells.unshift({x: snake.x, y: snake.y});
+
+  // remove cells as we move away from them
+  if (snake.cells.length > snake.maxCells) {
+    snake.cells.pop();
+  }
+
+  // draw apple
+  context.fillStyle = 'purple';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+
+  // draw snake one cell at a time
+  context.fillStyle = 'blue';
+  snake.cells.forEach(function(cell, index) {
+
+    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, grid-1, grid-1);
+
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.maxCells++;
+
+      // canvas is 400x400 which is 25x25 grids
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+
+    // check collision with all cells after this one (modified bubble sort)
+    for (var i = index + 1; i < snake.cells.length; i++) {
+
+      // snake occupies same space as a body part. reset game
+      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        snake.x = 160;
+        snake.y = 160;
+        snake.cells = [];
+        snake.maxCells = 4;
+        snake.dx = grid;
+        snake.dy = 0;
+
+        apple.x = getRandomInt(0, 25) * grid;
+        apple.y = getRandomInt(0, 25) * grid;
+      }
+    }
+  });
+}
+
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) {
+  // prevent snake from backtracking on itself by checking that it's
+  // not already moving on the same axis (pressing left while moving
+  // left won't do anything, and pressing right while moving left
+  // shouldn't let you collide with your own body)
+
+  // left arrow key
+  if (e.which === 37 && snake.dx === 0) {
+    snake.dx = -grid;
+    snake.dy = 0;
+  }
+  // up arrow key
+  else if (e.which === 38 && snake.dy === 0) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // right arrow key
+  else if (e.which === 39 && snake.dx === 0) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // down arrow key
+  else if (e.which === 40 && snake.dy === 0) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+});
+
+// start the game
+requestAnimationFrame(loop);
+        </script>
+
+    </body>
+</html>

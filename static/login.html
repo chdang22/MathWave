@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mathwave</title>
+    <link rel="stylesheet" href="styles/loginStyles.css">
+    <link rel="icon" type="image/jpeg" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <!-- nav menu -->
+        <nav class="navbar">
+            <!--logo-->
+            <button class="logo-button" id="logo-button">
+                <div class="logo-container"></div>
+            </button>
+            <!--nav buttons-->
+            <div class="nav-buttons">
+                <button class="button" id="about-button">About</button>
+                 <button class="button" id="login-button">Login</button>
+                <button class="button" id="signup-button">Signup</button>
+                <button class="button" id="break-button">Break Time</button>
+                <button class="button" id="support-button">Support</button>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <div class="login-container">
+        <div class="login">
+            <form id="login-form" action="/open_api/login" method="post">
+                <h2>Mathwave Login</h2>
+                <div class="group">
+                    <label for="username" class="label">Username:</label>
+                    <input type="text" id="username" class="input" name="username" required>
+                </div>
+                <div class="group">
+                    <label for="password" class="label">Password:</label>
+                    <input type="password" id="password" class="input" name="password" required>
+                </div>
+                <div class="group">
+                    <button type="submit" class="button">Login</button>
+                </div>
+                <div class="hr"></div>    
+                <div class="foot-lnk">
+                    <button class="foot-lnk" id="foot-lnk1">Don't Have an Account?</a>
+                    <button class="foot-lnk" id="foot-lnk2">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var signUpLink = document.getElementById('signup-link');
+            if (signUpLink) {
+                signUpLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default anchor action
+                    window.location.href = 'get_started/sign_up.html';
+                });
+            }
+            var getStartedButton = document.getElementById('get-started-btn');
+				if (getStartedButton) {
+					getStartedButton.addEventListener('click', function() {
+						window.location.href = 'get_started/sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                //nav bar buttons
+                var aboutButton = document.getElementById('about-button');
+				if (aboutButton) {
+					aboutButton.addEventListener('click', function() {
+						window.location.href = 'about.html'; // Redirect to about.html
+					});
+                }
+                
+                var loginButton = document.getElementById('login-button');
+				if (loginButton) {
+					loginButton.addEventListener('click', function() {
+						window.location.href = 'login.html'; // Redirect to login.html
+					});
+                }
+                var signupButton = document.getElementById('signup-button');
+				if (signupButton) {
+					signupButton.addEventListener('click', function() {
+						window.location.href = 'get_started/sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                var breakButton = document.getElementById('break-button');
+				if (breakButton) {
+					breakButton.addEventListener('click', function() {
+						window.location.href = 'break_time.html'; // Redirect to break.html
+					});
+                }
+                var supportButton = document.getElementById('support-button');
+				if (supportButton) {
+					supportButton.addEventListener('click', function() {
+						window.location.href = 'support.html'; // Redirect to break.html
+					});
+                }
+
+                var logoButton = document.getElementById('logo-button');
+				if (logoButton) {
+					logoButton.addEventListener('click', function() {
+						window.location.href = 'index.html'; // Redirect to index.html
+					});
+                }
+
+                var footLnk = document.getElementById('foot-lnk1');
+                if(footLnk) 
+                {
+                    footLnk.addEventListener('click', function() 
+                    {
+                        window.location.href = 'get_started/sign_up.html';
+                    });
+                }
+        });
+    </script>
+</body>
+</html>

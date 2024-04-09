@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" 
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+         <title> MathWave | About</title>
+         <link rel="stylesheet" type="text/css" href="styles/aboutStyles.css">
+        <link rel="icon" type="image/jpeg" href="images/favicon.png">
+    </head>
+
+
+    <body>
+        <div class = "bg-img">
+            <div class= "overlay"></div>
+        </div>
+         
+        <div class="main-container">
+            <header>
+                <!-- nav menu -->
+                <nav class="navbar">
+                    <!--logo-->
+                    <button class="logo-button" id="logo-button">
+                        <div class="logo-container"></div>
+                    </button>
+                    <!--nav buttons-->
+                    <div class="nav-buttons">
+                        <button class="button" id="about-button">About</button>
+                         <button class="button" id="login-button">Login</button>
+                        <button class="button" id="signup-button">Signup</button>
+                        <button class="button" id="break-button">Break Time</button>
+                        <button class="button" id ="support-button">Support</button>
+                    </div>
+                </nav>
+            </header>
+            <div class="content-wrapper">
+                <div class = "left-img"><div class= "overlay"></div></div> 
+                <div id="about-container">
+                    <h2 class="catchy-phrase"> <br> About Us</h2>
+                    <div class="hr"></div>
+                    
+                    <section id="our-story">
+                        <h2>Our Story</h2>
+                        <p>MathWave began with a vision: to transform how children experience and learn mathematics. 
+                            Founded in 2018 by Alice Johnson, a former mathematics teacher with a passion for educational technology, our journey started in a small, vibrant office in downtown Seattle. 
+                            Alice's dream was to create a platform where math isn't just a subject, but a world of fun and interactive challenges.</p>
+                    </section>
+
+                    <section class="our-mission">
+                        <h2>Our Mission</h2>
+                        <p>At MathWave, our mission is to kindle a lifelong passion for mathematics in young learners. We believe every child can excel in math when provided with engaging, intuitive, and supportive tools. 
+                            Our platform is more than just an educational tool; it's a gateway to a world where math is a fun and exciting adventure.</p>
+                    </section>
+
+                    <section class="what-we-do">
+                        <h2>What We Do</h2>
+                        <p>At MathWave, we are at the forefront of educational innovation, harnessing the power of brainwave data to revolutionize the learning experience. Our unique approach involves using advanced algorithms driven by real-time brainwave feedback to curate personalized learning content. This method allows us to tailor the educational experience to each student's attention span, learning pace, and cognitive responses.</p>
+                        <p>Our platform goes beyond traditional teaching methods by integrating brainwave tracking technology. This enables us to monitor key indicators such as attention levels and cognitive load, ensuring that each learning session is optimized for maximum engagement and effectiveness. By adapting to each student's individual needs, we create a learning environment that is not only more efficient but also deeply engaging and responsive to their mental state.</p>
+                        <p>MathWave's mission is to make learning a truly adaptive and interactive experience. We believe that by understanding and responding to the brain's feedback, we can unlock a new realm of personalized education, making learning more intuitive, enjoyable, and impactful for students everywhere.</p>
+                    </section>
+        
+                    <section class="our-team">
+                        <h2>Our Team</h2>
+                        <p>Our team is a melting pot of talent, comprising educators, tech enthusiasts, creative designers, and dreamers. We share a common goal: revolutionizing the way math is taught and perceived. We're constantly innovating, striving to make MathWave an ever-evolving platform that meets the ever-changing educational needs of children globally.</p>
+                    </section>
+        
+                    <section class="join-us">
+                        <h2>Join Us on Our Journey</h2>
+                        <p>Our story is just beginning, and the possibilities are endless. Whether you're a parent seeking to nurture your child's mathematical abilities, a teacher looking for dynamic teaching tools, or someone who shares our passion for educational technology, we invite you to join the MathWave community. Together, let's embark on a journey to make math a beloved subject and pave the way for a future where every child is a math enthusiast!</p>
+                    </section>
+                </div>
+                    </div> <!-- Close the .onboarding-steps div here -->
+                <div>
+            </div>
+        </div>
+
+        <script>
+
+            //page specfic button functionality-----
+            document.addEventListener('DOMContentLoaded', function() {
+                // get started onboarding
+				var getStartedButton = document.getElementById('get-started-btn');
+				if (getStartedButton) {
+					getStartedButton.addEventListener('click', function() {
+						window.location.href = 'get_started/sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                //nav bar buttons
+                var aboutButton = document.getElementById('about-button');
+				if (aboutButton) {
+					aboutButton.addEventListener('click', function() {
+						window.location.href = 'about.html'; // Redirect to about.html
+					});
+                }
+                
+                var loginButton = document.getElementById('login-button');
+				if (loginButton) {
+					loginButton.addEventListener('click', function() {
+						window.location.href = 'login.html'; // Redirect to login.html
+					});
+                }
+                var signupButton = document.getElementById('signup-button');
+				if (signupButton) {
+					signupButton.addEventListener('click', function() {
+						window.location.href = 'get_started/sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                var breakButton = document.getElementById('break-button');
+				if (breakButton) {
+					breakButton.addEventListener('click', function() {
+						window.location.href = 'break_time.html'; // Redirect to break.html
+					});
+                }
+                var supportButton = document.getElementById('support-button');
+				if (supportButton) {
+					supportButton.addEventListener('click', function() {
+						window.location.href = 'support.html'; // Redirect to break.html
+					});
+                }
+
+                var logoButton = document.getElementById('logo-button');
+				if (logoButton) {
+					logoButton.addEventListener('click', function() {
+						window.location.href = 'index.html'; // Redirect to index.html
+					});
+                }
+
+                
+            
+            });
+
+        </script>
+    </body>
+</html>

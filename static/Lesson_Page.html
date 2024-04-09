@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<style>
+
+.startlesson1:focus, .startlesson2:focus, .startlesson3:focus{
+    border:10px solid rgb(0, 0, 0);
+    font-weight: 100px;
+    justify-content: space-between;
+    margin-top: 75px;
+  }
+
+.lessons {
+    display: flex;
+    justify-content: center;
+    padding: 0px 50px;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.thumbnaillesson1,.thumbnaillesson2, .thumbnaillesson3{
+  background-color: #285474;
+  padding: 10px;
+  border-radius: 15px;
+  border-color: #285474;
+  border-style: solid;
+  overflow: hidden;
+  height: 300px; 
+  width: auto;
+  
+    
+} 
+
+.startlesson1,.startlesson2, .startlesson3{
+    display:inline-block;
+    background-color: #285474;
+    color: white;
+    font-size: 45px;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin-top: 75px;
+} 
+
+
+
+
+.header {
+    display: flex;
+    justify-content:space-between;
+    padding: 0px 30px;
+    align-items:center;
+    padding-bottom: 70px;
+}
+
+.logo {
+    height: 120px; 
+    width: 160px;
+}
+
+.helpbutton {
+    display: inline-block;
+    gap: 10px; 
+    padding: 0px 20px;
+}
+
+</style>
+
+<div class="header">
+  <div class="logo">
+    <img src="images/transparentLogo.png" style="height: 250px; width: 250px;">
+  </div>
+
+ <div id="text">
+    <p style="font-size: 60px; font-family: Arial, sans-serif; text-align: center; width: 800px; height: 50px;">Please select a lesson</p> 
+  </div>
+
+  <div id="Help">
+    <button class="helpbutton" href= "templates/help.html" style=" background-color:#285474; color:white; font-size: 30px; height: 75px; width: 150px; border-radius: 10px; margin:1px 20px;">Help</button>
+  </div>
+
+</div>
+
+
+  
+<div class="lessons">
+
+  <div class ="thumbnaillesson1">
+    <img src="images/Additon to 10 Thumbnail.png" style="height: 300px; width:400px;">
+  </div>
+
+  <center>
+  <div>
+    <p style="font-size: 60px; font-family: Arial, sans-serif; text-align: center; width: 500px; margin: 50px;">Learn to add to Ten</p> 
+  </div>
+  </center>
+
+  <a href="Video_Page.html?lessonNum=1" id="Lesson1">
+    <button class="startlesson1">Start Lesson</button>
+  </a>
+
+</div>
+
+
+<div class="lessons">
+
+  <div class ="thumbnaillesson2">
+    <img src="images/Addition to 20 Thumbnail.png" style="height: 300px; width:400px;">
+  </div>
+
+  <center>
+  <div>
+    <p style="font-size: 60px; font-family: Arial, sans-serif; text-align: center; width: 500px; margin: 50px;">Learn to add to Twenty</p> 
+  </div>
+  </center>
+
+  <a href="Video_Page.html?lessonNum=2" id="Lesson2">
+    <button class="startlesson2">Start Lesson</button>
+  </div>
+
+</a>
+
+
+<div class="lessons">
+
+  <div class ="thumbnaillesson3">
+    <img src="images/Ones and Tens Thumbnail.png" style="height: 300px; width:400px;">
+  </div>
+
+  <center>
+  <div>
+    <p style="font-size: 60px; font-family: Arial, sans-serif; text-align: center; width: 500px; margin: 50px;">Learn to count by Ones and Tens</p> 
+  </div>
+  </center>
+
+  <a href="Video_Page.html?lessonNum=3" id="Lesson3">
+    <button class="startlesson3">Start Lesson</button>
+  </a>
+
+</div>
+
+  <script> 
+  </script>
+</body>
+</html>

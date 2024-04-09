@@ -1,0 +1,211 @@
+body{
+	margin:0;
+	color:#6a6f8c;
+	/*background:#a1d5ff;*/
+	font:600 16px/18px 'Open Sans',sans-serif;
+	background:url(https://img.freepik.com/premium-photo/blurred-colorful-wallpaper-background_976742-179.jpg) no-repeat;
+	background-size: cover;
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+
+/* padding to the nav */
+.navbar {
+    display: flex;
+    height: 100px;
+    position: top;
+    align-items: center;
+    background-color: #42424262;
+    backdrop-filter: blur(5px);
+}
+/*set bg as nav bar*/
+.logo-container {
+    
+    height: 250px; /* Adjust as needed */
+    width: 400px;
+    background-image: url("https://i.gyazo.com/73d431b1e31d8bafdc4423d806f9cff0.png");
+    background-position: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+
+}
+
+.nav-buttons {
+    display: flex;
+    align-items:start
+}/*remove defauly styles of logo button*/
+.logo-button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button {
+    height: 100px;
+    padding: 20px 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-right-width: 0.5px;
+    border: none;
+    background-color: #ffffff00 ; /* same blue as logo background */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s; /* Smooth background transition on hover */
+    font-size: larger;
+    color: white; /* txt color */
+    
+}
+
+.button:hover:not(.nav-buttons button){
+    background-color: #012a6f; /* Slightly darker gray on hover */
+}
+
+.nav-buttons .button:hover{
+    color: #9eb8ff;
+}
+
+
+
+
+.login-container{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+    min-height: 1050px;
+	position:relative;
+
+	background:url(https://c.stocksy.com/a/Sg2C00/za/2870256.jpg) no-repeat center;
+    background-size: cover;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+#login-form{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(40, 57, 101, 0.112);
+
+
+}
+
+.login #login-form{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+}
+
+
+.login #login-form{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+
+#login-form{
+	min-height:345px;
+	position:relative;
+}
+h2{
+	color:#fff;
+	border-color:#1161ee;
+    border-bottom: #1161ee;
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+#login-form .group{
+	margin-bottom:15px;
+}
+.group .label, .group .input,.group .button,h2{
+	width:100%;
+	color:#fff;
+	display:block;
+    text-transform: uppercase;
+
+}
+
+.group .button{
+    margin-top:25px;
+    margin-bottom: none;
+}
+#login-form .input,
+#login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+#login-form .group .button{
+	background:#385280;
+    margin-top: 0px 50px;
+	height: 50px;
+	font-size: medium;
+
+}
+.group .label{
+	color:#ffffff;
+	font-size:12px;
+}
+group .button{
+	background:#1161ee;
+}
+#login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+#login-form .group label .icon:before,
+#login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+#login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+#login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+    width:100%;
+	color:#fff;
+	display:block;
+    text-transform: uppercase;
+    background:#3562b100;
+    border:none;
+	border-radius:25px;
+	background:rgba(255, 255, 255, 0);
+    margin: none;
+    margin-top: 30px;
+}

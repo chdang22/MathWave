@@ -1,0 +1,13 @@
+body{
+    background-color: #f1b880;
+}
+
+.question-content{
+    margin-top: 5px;
+    font-size:35px;
+}
+
+.page-title{
+    text-align: center;
+    font-size:65px;
+}

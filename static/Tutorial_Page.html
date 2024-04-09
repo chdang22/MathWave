@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<style>
+  .videobox {
+  margin: auto;
+  box-shadow: 80px 80px 80px rgba(6, 6, 7, 0.2);
+  background-color: #285474;
+  padding: 5px;
+  border-radius: 25px;
+  border-color: #285474;
+  border-style: solid;
+  overflow: hidden;
+  height:540px;
+  width:960px;
+}
+
+.continue:focus{
+    border:10px solid rgb(0, 0, 0);
+    font-weight: 100px;
+    justify-content: space-between;
+    margin: 0 10px;
+  }
+
+.continuebutton {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.continue{
+    display:inline-block;
+    background-color: #285474;
+    color: white;
+    font-size: 60px;
+    height: 125px;
+    width: 600px;
+    border-radius: 10px;
+    justify-content: space-between;
+} 
+
+.header {
+    display: flex;
+    justify-content:space-between;
+    padding: 0px 30px;
+    align-items:center;
+}
+
+.logo {
+    height: 200px; 
+    width: auto;
+}
+
+.helpbutton {
+    display: inline-block;
+    gap: 10px; 
+    padding: 0px 20px;
+}
+
+</style>
+
+<div class="header">
+  <div class="logo">
+    <img src="images/transparentLogo.png" style="height: 250px; width: 250px;">
+  </div>
+
+ <div id="text">
+    <p style="font-size: 60px; font-family: Arial, sans-serif; text-align: center; width: 800px; height: 100px;">Please watch this video on how to use the headband</p> 
+  </div>
+
+  <div id="Help">
+    <button class="helpbutton" href= "templates/help.html" style=" background-color:#285474; color:white; font-size: 30px; height: 75px; width: 150px; border-radius: 10px; margin:1px 20px;">Help</button>
+  </div>
+
+</div>
+
+
+<center>
+ 
+
+  <video controls id="video" class="videobox">
+      <source src="videos/Tutorial Video.mp4">
+  </video>
+ </center>
+  
+<div class="continuebutton">
+  <a href="Lesson_Page.html" id="Continue" style="display: none;">
+  <button class="continue">Continue</button>
+  </a>
+</div>
+
+  <script> 
+
+    if(ConStatus == 'Connected'){
+      alert("Headband Is Connected");
+    }
+
+    video.addEventListener("play", (event) => {
+			play_start();
+		});
+
+    function play_start(){
+      document.getElementById("Continue").style.display="none";
+  
+    }
+
+    video.addEventListener("ended", (event) => {
+			play_stop();
+		});
+
+    function play_stop(){
+      document.getElementById("Continue").style.display="block";
+  
+    }
+
+
+  </script>
+</body>
+</html>

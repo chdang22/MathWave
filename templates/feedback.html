@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+{#    <link rel="stylesheet" href="./css/base.css">#}
+{#    <link rel="stylesheet" href="./css/feedback.css">#}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/feedback.css') }}">
+</head>
+<body>
+    
+    <!-- header -->
+    <div class="header wrapper">
+            <a href="#" class="logo"></a>
+            <div class="nav">
+                <a href="#" class="rest">BrainBit</a>
+                <a href="#" class="rest">Connect</a>
+                <a href="/help" class="rest">More</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Enter">
+                <a href="#"></a>
+            </div>
+            <div class="id">
+                <a href="#" class="av"></a>
+                <a href="#" class="name">Tao Deng</a>
+            </div>
+    </div>
+
+    <div class="body wrapper">
+        <form action="/postfb" method="Post">
+            <h1>Leave us feed back</h1>
+            <input type="text" placeholder="Title" name="title">
+            <textarea name="content" id="" cols="" rows="" placeholder="Content"></textarea>
+            <button type="submit" class="post">Post</button>
+        </form>
+    </div>
+
+
+
+    <!-- footer -->
+    <div class="footer wrapper">
+        <div class="left">
+<!--             <a href="#"><img src="./images/logo2.png" alt=""></a> -->
+            <a href="#"><img src="{{url_for('static', filename='images/logo2.png')}}"></a>
+            <p>BrainBit is a non-medical product and not intended to diagnose, treat, or cure.</p>
+            <a href="#" class="download">Download</a>
+        </div>
+        <div class="right">
+
+            <dl>
+                <dt>Beginner's Guide</dt>
+                <dd><a href="#">How to register</a></dd>
+                <dd><a href="#">How to Connect</a></dd>
+                <dd><a href="#">How to use</a></dd>
+                <dd><a href="#">XXXXXXXX</a></dd>
+                <dd><a href="#">XXXXXXXX</a></dd>
+            </dl>
+
+            <dl>
+                <dt>About BrainBit</dt>
+                <dd><a href="#">About</a></dd>
+                <dd><a href="#">Help</a></dd>
+            </dl>
+
+            <dl>
+                <dt>Policy</dt>
+                <dd><a href="#">Return and Refund Policy</a></dd>
+                <dd><a href="#">XXXX</a></dd>
+            </dl>
+
+        </div>
+
+    </div>
+</body>
+</html>

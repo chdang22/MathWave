@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" 
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+         <title> MathWave</title>
+         <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" type="image/jpeg" href="images/favicon.png">
+    </head>
+
+
+    <body>
+        <div class = "bg-img">
+            <div class= "overlay"></div>
+        </div>
+         
+        <div class="main-container">
+            <header>
+                <!-- nav menu -->
+                <nav class="navbar">
+                    <!--logo-->
+                    <button class="logo-button" id="logo-button">
+                        <div class="logo-container"></div>
+                    </button>
+                    <!--nav buttons-->
+                    <div class="nav-buttons">
+                        <button class="button" id="about-button">About</button>
+                         <button class="button" id="login-button">Login</button>
+                        <button class="button" id="signup-button">Signup</button>
+                        <button class="button" id="break-button">Break Time</button>
+                        <button class="button" id ="support-button">Support</button>
+                    </div>
+                </nav>
+            </header>
+            <div class="content-wrapper">
+                <div class = "left-img"><div class= "overlay"></div></div> 
+                <div id="onboarding-container">
+                    <h2 class="catchy-phrase"> <br> Dive into Mathwave!</h2>
+                    <div class="hr"></div>
+                    
+                    <div class="onboarding-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <p>Signup</p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <p>Answer Questionnaire</p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <p>Watch Tutorial</p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <p>Start <br>Learning</p>
+                        </div>
+                    </div> <!-- Close the .onboarding-steps div here -->
+
+                    <div class="centered-button">
+                        <div class="hr2"></div>
+                        <button id="get-started-btn" class="button">Get Started ></button>
+                    </div>
+                <div>
+            </div>
+        </div>
+
+        <script>
+
+            //page specfic button functionality-----
+            document.addEventListener('DOMContentLoaded', function() {
+                // get started onboarding
+				var getStartedButton = document.getElementById('get-started-btn');
+				if (getStartedButton) {
+					getStartedButton.addEventListener('click', function() {
+						window.location.href = 'get_started/sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                //nav bar buttons
+                var aboutButton = document.getElementById('about-button');
+				if (aboutButton) {
+					aboutButton.addEventListener('click', function() {
+						window.location.href = 'about.html'; // Redirect to about.html
+					});
+                }
+                
+                var loginButton = document.getElementById('login-button');
+				if (loginButton) {
+					loginButton.addEventListener('click', function() {
+						window.location.href = 'login.html'; // Redirect to login.html
+					});
+                }
+                var signupButton = document.getElementById('signup-button');
+				if (signupButton) {
+					signupButton.addEventListener('click', function() {
+						window.location.href = 'get_started/sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                var breakButton = document.getElementById('break-button');
+				if (breakButton) {
+					breakButton.addEventListener('click', function() {
+						window.location.href = 'break_time.html'; // Redirect to break.html
+					});
+                }
+                var supportButton = document.getElementById('support-button');
+				if (supportButton) {
+					supportButton.addEventListener('click', function() {
+						window.location.href = 'support.html'; // Redirect to break.html
+					});
+                }
+
+                var logoButton = document.getElementById('logo-button');
+				if (logoButton) {
+					logoButton.addEventListener('click', function() {
+						window.location.href = 'index.html'; // Redirect to index.html
+					});
+                }
+
+                
+            
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+2023-10-18 20:11:16,475 - tools.logging scanner():96: - DEBUG - Call to start scanner
+[2023-10-18 20:11:22.656] [sdk_log] [debug] BLE Scan stopped
+Starting search for 5 sec...
+Sensor found: SensorInfo(SensFamily=<SensorFamily.SensorLEBrainBit: 3>, SensModel=0, Name='BrainBit', Address='DB:FA:F6:7B:97:9B', SerialNumber='132017', PairingRequired=False)
+SensorInfo(SensFamily=<SensorFamily.SensorLEBrainBit: 3>, SensModel=0, Name='BrainBit', Address='DB:FA:F6:7B:97:9B', SerialNumber='132017', PairingRequired=False)
+Device connected
+SensorFamily.SensorLEBrainBit
+[<SensorFeature.FeatureSignal: 0>, <SensorFeature.FeatureResist: 4>]
+[<SensorCommand.CommandStartSignal: 0>, <SensorCommand.CommandStopSignal: 1>, <SensorCommand.CommandStartResist: 2>, <SensorCommand.CommandStopResist: 3>]
+[ParameterInfo(Param=<SensorParameter.ParameterOffset: 8>, ParamAccess=<SensorParamAccess.ParamAccessRead: 0>), ParameterInfo(Param=<SensorParameter.ParameterName: 0>, ParamAccess=<SensorParamAccess.ParamAccessRead: 0>), ParameterInfo(Param=<SensorParameter.ParameterState: 1>, ParamAccess=<SensorParamAccess.ParamAccessReadNotify: 2>), ParameterInfo(Param=<SensorParameter.ParameterAddress: 2>, ParamAccess=<SensorParamAccess.ParamAccessRead: 0>), ParameterInfo(Param=<SensorParameter.ParameterSerialNumber: 3>, ParamAccess=<SensorParamAccess.ParamAccessRead: 0>), ParameterInfo(Param=<SensorParameter.ParameterFirmwareMode: 5>, ParamAccess=<SensorParamAccess.ParamAccessRead: 0>), ParameterInfo(Param=<SensorParameter.ParameterSamplingFrequency: 6>, ParamAccess=<SensorParamAccess.ParamAccessRead: 0>), ParameterInfo(Param=<SensorParameter.ParameterGain: 7>, ParamAccess=<SensorParamAccess.ParamAccessRead: 0>), ParameterInfo(Param=<SensorParameter.ParameterFirmwareVersion: 16>, ParamAccess=<SensorParamAccess.ParamAccessRead: 0>), ParameterInfo(Param=<SensorParameter.ParameterBattPower: 20>, ParamAccess=<SensorParamAccess.ParamAccessReadNotify: 2>)]
+BrainBit
+SensorState.StateInRange
+DB:FA:F6:7B:97:9B
+132017
+97
+SensorSamplingFrequency.FrequencyHz250
+SensorGain.SensorGain6
+SensorDataOffset.DataOffset0
+SensorVersion(FwMajor=10, FwMinor=0, FwPatch=0, HwMajor=1, HwMinor=0, HwPatch=0, ExtMajor=65)
+Battery: 97
+Start signal
+[BrainBitSignalData(PackNum=0, Marker=0, O1=0.4, O2=0.1775377059342441, T3=0.29425153184083164, T4=-0.4), BrainBitSignalData(PackNum=0, Marker=0, O1=0.38749998807905967, O2=0.1650376940133038, T3=0.2817515199198913, T4=-0.38750036954915007)]
+[BrainBitSignalData(PackNum=1, Marker=0, O1=0.21485463605369193, O2=1.9073504518036383e-05, T3=0.08183448966454474, T4=-0.2690367403380779), BrainBitSignalData(PackNum=1, Marker=0, O1=0.2023546241327516, O2=0.012518703955367999, T3=0.08689964952435449, T4=-0.2565371098872279)]
+[BrainBitSignalData(PackNum=2, Marker=0, O1=0.17949998807905967, O2=0.051327182128126266, T3=0.08817147080561714, T4=-0.2099825000596047), BrainBitSignalData(PackNum=2, Marker=0, O1=0.16699997615811935, O2=0.03882717020718594, T3=0.07567145888467683, T4=-0.19748286960875475)]
+[BrainBitSignalData(PackNum=3, Marker=0, O1=0.10240450134706626, O2=-0.03148120067710941, T3=0.014150633001931192, T4=-0.1714891161814844), BrainBitSignalData(PackNum=3, Marker=0, O1=0.09778260973225568, O2=-0.01898157022625945, T3=0.023392508881100543, T4=-0.1600778198984336)]
+[BrainBitSignalData(PackNum=4, Marker=0, O1=0.10629130009775171, O2=0.01388703716949193, T3=0.03665431657249124, T4=-0.15632987626063943), BrainBitSignalData(PackNum=4, Marker=0, O1=0
+
+
+
+[BrainBitSignalData(PackNum=542, Marker=0, O1=0.043903774169706505, O2=-0.01883012660038624, T3=-0.007529075173449682, T4=-0.027819087809646426), BrainBitSignalData(PackNum=542, Marker=0, O1=0.04392704384521851, O2=-0.0249645471234771, T3=-0.014315428080967026, T4=-0.02726633764871373)]
+[BrainBitSignalData(PackNum=543, Marker=0, O1=0.0396007915504375, O2=-0.027961376153350977, T3=-0.02633783944877572, T4=-0.01983301146794459), BrainBitSignalData(PackNum=543, Marker=0, O1=0.0393608468636006, O2=-0.02656862885344396, T3=-0.022937033593209834, T4=-0.021444341129628307)]
+[BrainBitSignalData(PackNum=544, Marker=0, O1=0.04364437450826121, O2=-0.01926996161457216, T3=-0.008671959564170422, T4=-0.027682902987387646), BrainBitSignalData(PackNum=544, Marker=0, O1=0.044377560021934534, O2=-0.02352716782299788, T3=-0.011917888563049853, T4=-0.027833583673080132)]
+Battery: 97
+Stop signal
+Battery: 97
+Start resist
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+BrainBitResistData(O1=inf, O2=inf, T3=inf, T4=inf)
+Battery: 97
+Battery: 97
+Stop resist
+Battery: 97
+Disconnect from sensor
+Starting search for 5 sec...
+
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up - MathWave</title>
+            <script src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+                crossorigin="anonymous">
+            </script>
+        <link rel="stylesheet" type="text/css" href="../styles/signupStyles.css">
+        <link rel="icon" type="image/jpeg" href="../images/favicon.png">
+    </head>
+    <body>
+        <div class = "bg-img-signup">
+            <div class= "overlay"></div>
+        </div>
+
+        <div class="main-container">
+            <header>
+                <!-- nav menu -->
+                <nav class="navbar">
+                    <!--logo-->
+                    <button class="logo-button" id="logo-button">
+                        <div class="logo-container"></div>
+                    </button>
+                    <!--nav buttons-->
+                    <div class="nav-buttons">
+                        <button class="button" id="about-button">About</button>
+                         <button class="button" id="login-button">Login</button>
+                        <button class="button" id="signup-button">Signup</button>
+                        <button class="button" id="break-button">Break Time</button>
+                        <button class="button" id="support-button">Support</button>
+                    </div>
+                </nav>
+            </header>
+
+        
+            <!-- sign up form-->
+            <div class="signup-container">
+                
+                <div class="signup">
+                    
+                    <form id="signup-form">
+                        <h2>Sign Up</h2>
+                        <div class="group">
+                            <label for="first-name" class="label">First Name</label>
+                            <input type="text" id="first-name" name="first_name" class="input" required><br>
+                        </div>
+                        <div class="group">
+                            <label for="last-name" class="label">Last Name</label>
+                            <input type="text" id="last-name" name="last_name" class="input" required><br>
+                        </div>
+                        <div class="group">
+                            <label for="dob" class="label">Date of Birth</label>
+                            <input type="date" id="dob" name="dob"  class="input" required><br>
+                        </div>
+                        <div class="group">
+                            <label for="grade" class="label">Grade</label>
+                            <input type="text" id="grade" name="grade"  class="input" required><br>                    
+                        </div>
+                        <div class="group">
+                            <label for="username" class="label">Username</label>
+                            <input type="text" id="username" name="username"  class="input" required><br> 
+                        </div>
+                        <div class="group">
+                            <label for="password" class="label">Password</label>
+                            <input type="password" id="password" name="password"  class="input" required>
+                        </div>
+                        <div class="group">
+                            <button type="button" class="button" id="toggle-password" onclick="togglePassword()">Show Password</button><br>
+                            <button type="submit" class="button" id="submit-signup">Sign Up</button>
+                        </div>
+                        <div class="hr"></div>    
+                        <div class="foot-lnk">
+                            <button class="foot-lnk" id="foot-lnk">Already A Member?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // JavaScript to toggle password visibility
+            function togglePassword() {
+                var passwordField = document.getElementById('password');
+                if (passwordField.type === 'password') {
+                    passwordField.type = 'text';
+                } else {
+                    passwordField.type = 'password';
+                }
+            }
+
+            $(document).ready(function() 
+            {
+                $('#signup-form').on('submit', function(e) 
+                {
+                    e.preventDefault(); // Prevent the default form submission
+
+                    // Collect form data into a JavaScript object
+                    var userData = {
+                        first_name: $('#first-name').val(),
+                        last_name: $('#last-name').val(),
+                        dob: $('#dob').val(),
+                        grade: $('#grade').val(),
+                        username: $('#username').val(),
+                        password: $('#password').val() // Make sure you've added this field in the form
+                    };
+
+                    // Send the form data to the server using AJAX
+                    $.ajax({
+                        url: '/api/create_user', // The URL where you want to post the data
+                        type: 'POST',
+                        contentType: 'application/json', // The type of content you're sending
+                        data: JSON.stringify(userData), // Convert the JavaScript object to a JSON string
+                        success: function(response) 
+                        {
+                            // Handle success - for example, you might want to redirect
+                            // to the login page or display a success message
+                            console.log('User created:', response);
+                            // Redirect to login page or display success message
+                            //window.location.href = '../login.html';
+                            window.location.href = 'questionnaire.html'; // redirect to questionnaire as per onboarding steps
+                        },
+                        error: function(xhr, status, error) 
+                        {
+                            // Handle errors - for example, display an error message
+                            console.error('Signup failed:', error);
+                            // Display an error message to the user
+                            alert('Error: ' + error);
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() 
+            {
+                /*go login page using nav bar login button*/
+                var loginButton = document.getElementById('login-button');
+                if(loginButton) 
+                {
+                    loginButton.addEventListener('click', function() 
+                    {
+                        window.location.href = '../login.html';
+                    });
+                }
+
+                //nav bar buttons
+                var aboutButton = document.getElementById('about-button');
+				if (aboutButton) {
+					aboutButton.addEventListener('click', function() {
+						window.location.href = '../about.html'; // Redirect to about.html
+					});
+                }
+                
+                var loginButton = document.getElementById('login-button');
+				if (loginButton) {
+					loginButton.addEventListener('click', function() {
+						window.location.href = '../login.html'; // Redirect to login.html
+					});
+                }
+                var signupButton = document.getElementById('signup-button');
+				if (signupButton) {
+					signupButton.addEventListener('click', function() {
+						window.location.href = 'sign_up.html'; // Redirect to sign_up.html
+					});
+                }
+                var breakButton = document.getElementById('break-button');
+				if (breakButton) {
+					breakButton.addEventListener('click', function() {
+						window.location.href = '../break_time.html'; // Redirect to break.html
+					});
+                }
+
+                var logoButton = document.getElementById('logo-button');
+				if (logoButton) {
+					logoButton.addEventListener('click', function() {
+						window.location.href = '../index.html'; // Redirect to index.html
+					});
+                }
+                var supportButton = document.getElementById('support-button');
+				if (supportButton) {
+					supportButton.addEventListener('click', function() {
+						window.location.href = '../support.html'; // Redirect to support.html
+					});
+                }
+                /* login using "Already a MEmber" button at bottom of signup form*/
+                var footLnk = document.getElementById('foot-lnk');
+                if(footLnk) 
+                {
+                    footLnk.addEventListener('click', function() 
+                    {
+                        window.location.href = '../login.html';
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help</title>
+{#    <link rel="stylesheet" href="./css/base.css">#}
+{#    <link rel="stylesheet" href="./css/help.css">#}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/help.css') }}">
+</head>
+<body>
+    <!-- header -->
+    <div class="header wrapper">
+        <a href="/" class="logo"></a>
+        <div class="nav">
+            <a href="#" class="rest">BrainBit</a>
+            <a href="#" class="rest">Connect</a>
+            <a href="#" class="rest">More</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Enter">
+            <a href="#"></a>
+        </div>
+        <div class="id">
+            <a href="#" class="av"></a>
+            <a href="#" class="name">Tao Deng</a>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner wrapper">
+        <div class="left">
+
+        </div>
+
+        <ul class="right">
+            <li>
+                <a href="#">Hardware</a>
+            </li>
+            <li>
+                <a href="#">Software</a>
+            </li>
+            <li>
+                <a href="#">Area of use</a>
+            </li>
+            <li>
+                <a href="#">Help center</a>
+            </li>
+            <li>
+                <a href="/feedback">Feedback</a>
+            </li>
+            <li>
+                <a href="#">Contact us</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- body -->
+    <div class="body1 wrapper">
+        <div class="top">
+            <h4>NEWS</h4>
+            <a href="#">ALL</a>
+        </div>
+        <div class="box">
+            <ul>
+                <li>
+                    <a href="#">
+{#                        <img src="/templates/upload/upload1.png" alt="">#}
+                        <img src="{{url_for('static', filename='upload/upload1.png')}}">
+                        <div class="text">
+                            <h4>The use of Neurofeedback in psychology</h4>
+                            <p>
+                                <span>NEW</span>
+                                <i> · 05.09.23</i>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#">
+{#                        <img src="./upload/upload2.png" alt="">#}
+                        <img src="{{url_for('static', filename='upload/upload2.png')}}">
+                        <div class="text">  
+                            <h4>How to wear a BrainBit Headband</h4>
+                            <p>
+                                <span>NEW</span>
+                                <i> · 05.09.23</i>
+                            </p>    
+                        </div>  
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+{#                        <img src="./upload/upload3.png" alt="">#}
+                        <img src="{{url_for('static', filename='upload/upload3.png')}}">
+                        <div class="text">  
+                            <h4>Neurofeedback for psychologists</h4>
+                            <p>
+                                <span>NEW</span>
+                                <i> · 05.09.23</i>
+                            </p>    
+                        </div>  
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+{#                        <img src="./upload/upload4.png" alt="">#}
+                        <img src="{{url_for('static', filename='upload/upload4.png')}}">
+                        <div class="text">  
+                            <h4>The influence of the EEG-dependent feedback method of schoolchildren</h4>
+                            <p>
+                                <span>NEW</span>
+                                <i> · 05.09.23</i>
+                            </p>    
+                        </div>  
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+{#                        <img src="./upload/upload4.png" alt="">#}
+                        <img src="{{url_for('static', filename='upload/upload1.png')}}">
+                        <div class="text">  
+                            <h4>The influence of the EEG-dependent feedback method of schoolchildren</h4>
+                            <p>
+                                <span>NEW</span>
+                                <i> · 05.09.23</i>
+                            </p>    
+                        </div>  
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+{#                        <img src="./upload/upload4.png" alt="">#}
+                        <img src="{{url_for('static', filename='upload/upload1.png')}}">
+                        <div class="text">  
+                            <h4>The influence of the EEG-dependent feedback method of schoolchildren</h4>
+                            <p>
+                                <span>NEW</span>
+                                <i> · 05.09.23</i>
+                            </p>    
+                        </div>  
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer wrapper">
+        <div class="left">
+{#            <a href="#"><img src="./images/logo2.png" alt=""></a>#}
+            <a href="#"><img src="{{url_for('static', filename='images/logo2.png')}}"></a>
+            <p>BrainBit is a non-medical product and not intended to diagnose, treat, or cure.</p>
+            <a href="#" class="download">Download</a>
+        </div>
+        <div class="right">
+
+            <dl>
+                <dt>Beginner's Guide</dt>
+                <dd><a href="#">How to register</a></dd>
+                <dd><a href="#">How to Connect</a></dd>
+                <dd><a href="#">How to use</a></dd>
+                <dd><a href="#">XXXXXXXX</a></dd>
+                <dd><a href="#">XXXXXXXX</a></dd>
+            </dl>
+
+            <dl>
+                <dt>About BrainBit</dt>
+                <dd><a href="#">About</a></dd>
+                <dd><a href="#">Help</a></dd>
+            </dl>
+
+            <dl>
+                <dt>Policy</dt>
+                <dd><a href="#">Return and Refund Policy</a></dd>
+                <dd><a href="#">XXXX</a></dd>
+            </dl>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

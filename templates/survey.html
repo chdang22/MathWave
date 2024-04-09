@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey</title>
+{#    <link rel="stylesheet" href="./css/base.css">#}
+{#    <link rel="stylesheet" href="./css/survey.css">#}
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/survey.css') }}">
+</head>
+
+<body>
+     <!-- header -->
+     <div class="header wrapper">
+        <a href="#" class="logo"></a>
+        <div class="nav">
+            <a href="#" class="rest">BrainBit</a>
+            <a href="#" class="rest">Connect</a>
+            <a href="/help" class="rest">More</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Enter">
+            <a href="#"></a>
+        </div>
+        <div class="id">
+            <a href="#" class="av"></a>
+            <a href="#" class="name">Tao Deng</a>
+        </div>
+    </div>
+
+    <div class="banner wrapper"></div>
+
+    <h1>Help us know you better</h1>
+
+
+     <form action="/doadd" method="Post">
+        <div class="question">
+            <h4>Gender</h4>
+            <div class="select">
+                <select name="q1">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <hr>
+        </div>
+
+        <div class="question">
+            <h4>Educational background</h4>
+            <div class="select">
+                <select name="q2">
+                    <option value="Elementary">Elementary</option>
+                    <option value="Middle">Middle</option>
+                    <option value="High">High</option>
+                    <option value="College">College</option>
+                </select>
+            </div>
+            <hr>
+        </div>
+
+        <div class="question">
+            <h4>What subject do you want to study?</h4>
+            <div class="select">
+                <select name="q3">
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="History">History</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Physics">Physics</option>
+                </select>
+            </div>
+            <hr>
+        </div>
+
+        <div class="question">
+            <h4>What are you interested in?</h4>
+            <div class="select">
+                <select name="q4">
+                    <option value="Sports">Sports</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="News">News</option>
+                    <option value="Movies">Movies</option>
+                </select>
+            </div>
+            <hr>
+        </div>
+
+        <div class="center">
+            <button type="submit">Submit</button>
+        </div>
+     </form>
+    <!-- footer -->
+    <hr>
+    <div class="footer wrapper">
+        <div class="left">
+{#            <a href="#"><img src="./images/logo2.png" alt=""></a>#}
+            <a href="#"><img src="{{url_for('static', filename='images/logo2.png')}}"></a>
+            <p>BrainBit is a non-medical product and not intended to diagnose, treat, or cure.</p>
+            <a href="#" class="download">Download</a>
+        </div>
+        <div class="right">
+
+            <dl>
+                <dt>Beginner's Guide</dt>
+                <dd><a href="#">How to register</a></dd>
+                <dd><a href="#">How to Connect</a></dd>
+                <dd><a href="#">How to use</a></dd>
+                <dd><a href="#">XXXXXXXX</a></dd>
+                <dd><a href="#">XXXXXXXX</a></dd>
+            </dl>
+
+            <dl>
+                <dt>About BrainBit</dt>
+                <dd><a href="#">About</a></dd>
+                <dd><a href="#">Help</a></dd>
+            </dl>
+
+            <dl>
+                <dt>Policy</dt>
+                <dd><a href="#">Return and Refund Policy</a></dd>
+                <dd><a href="#">XXXX</a></dd>
+            </dl>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
